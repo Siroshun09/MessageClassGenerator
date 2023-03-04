@@ -73,8 +73,9 @@ publishing {
     }
 }
 
-if (!System.getenv().containsKey("GITHUB_ACTIONS")) {
-    signing {
+signing {
+    isRequired = !System.getenv().containsKey("GITHUB_ACTIONS")
+    if (isRequired) {
         useGpgCmd()
     }
 }
