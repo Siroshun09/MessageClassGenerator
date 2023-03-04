@@ -73,6 +73,8 @@ publishing {
     }
 }
 
-signing {
-    useGpgCmd()
+if (!System.getenv().containsKey("GITHUB_ACTIONS")) {
+    signing {
+        useGpgCmd()
+    }
 }
