@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <groupId>com.github.siroshun09.messageclassgenerator</groupId>
+  <artifactId>com.github.siroshun09.messageclassgenerator.gradle.plugin</artifactId>
+  <versioning>
+    <latest>0.0.1-SNAPSHOT</latest>
+    <versions>
+      <version>0.0.1-SNAPSHOT</version>
+    </versions>
+    <lastUpdated>20230304042919</lastUpdated>
+  </versioning>
+</metadata>
