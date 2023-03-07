@@ -3,10 +3,10 @@
   <groupId>com.github.siroshun09.messageclassgenerator</groupId>
   <artifactId>messageclassgenerator</artifactId>
   <versioning>
-    <latest>0.0.1-SNAPSHOT</latest>
+    <latest>0.0.2-SNAPSHOT</latest>
     <versions>
-      <version>0.0.1-SNAPSHOT</version>
+      <version>0.0.2-SNAPSHOT</version>
     </versions>
-    <lastUpdated>20230307064421</lastUpdated>
+    <lastUpdated>20230307085339</lastUpdated>
   </versioning>
 </metadata>

@@ -3,10 +3,10 @@
   <groupId>com.github.siroshun09.messageclassgenerator</groupId>
   <artifactId>com.github.siroshun09.messageclassgenerator.gradle.plugin</artifactId>
   <versioning>
-    <latest>0.0.1-SNAPSHOT</latest>
+    <latest>0.0.2-SNAPSHOT</latest>
     <versions>
-      <version>0.0.1-SNAPSHOT</version>
+      <version>0.0.2-SNAPSHOT</version>
     </versions>
-    <lastUpdated>20230307064414</lastUpdated>
+    <lastUpdated>20230307085333</lastUpdated>
   </versioning>
 </metadata>
