@@ -24,6 +24,8 @@ public abstract class MessageClassGeneratorExtension {
     public TaskProvider<GenerateMessageClassTask> registerGenerateMessageClassTask(Action<GenerateMessageClassTask> configure) {
         var task = project.getTasks().register(GenerateMessageClassTask.TASK_NAME, GenerateMessageClassTask.class);
 
+        task.get().getOutputs().upToDateWhen($ -> false);
+
         project.getTasks().getByName("compileJava").dependsOn(GenerateMessageClassTask.TASK_NAME);
 
         configure.execute(task.get());
@@ -48,6 +50,8 @@ public abstract class MessageClassGeneratorExtension {
 
     public TaskProvider<CollectMessagesTask> registerCollectMessagesTask(Action<CollectMessagesTask> configure) {
         var task = project.getTasks().register(CollectMessagesTask.TASK_NAME, CollectMessagesTask.class);
+
+        task.get().getOutputs().upToDateWhen($ -> false);
 
         project.getTasks().getByName("processResources").dependsOn(CollectMessagesTask.TASK_NAME);
 
