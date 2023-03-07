@@ -1,6 +1,7 @@
 package com.github.siroshun09.messageclassgenerator.source;
 
 import com.github.siroshun09.messageclassgenerator.processor.properties.PropertiesProcessor;
+import com.github.siroshun09.messageclassgenerator.util.Naming;
 import org.jetbrains.annotations.Nullable;
 
 import java.nio.file.Files;
@@ -44,6 +45,7 @@ public class PropertiesFileSource implements MessageSourceSupplier, Watchable {
     }
 
     private MessageSource createMessageSource(Map<String, String> messageMap) {
+        var className = this.className != null ? this.className : Naming.toClassName(filepath.getFileName().toString().replace(".properties", "")) + "Messages";
         return new MessageSource(filepath.getFileName().toString(), packageName, className, messageMap);
     }
 }
