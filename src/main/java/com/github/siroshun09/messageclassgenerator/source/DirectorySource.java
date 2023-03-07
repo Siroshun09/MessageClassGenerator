@@ -2,12 +2,13 @@ package com.github.siroshun09.messageclassgenerator.source;
 
 import com.github.siroshun09.messageclassgenerator.processor.properties.PropertiesProcessor;
 import com.github.siroshun09.messageclassgenerator.util.Naming;
+import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.util.function.Function;
+import java.util.function.UnaryOperator;
 import java.util.stream.Stream;
 
 public class DirectorySource implements MessageSourceSupplier, Watchable {
@@ -16,7 +17,7 @@ public class DirectorySource implements MessageSourceSupplier, Watchable {
 
     public String rootPackageName;
 
-    public Function<String, String> filenameToClassNameFunction = filename -> Naming.toClassName(filename.replace(".properties", "")) + "Messages";
+    public final FilenameToClassName filenameToClassName = new FilenameToClassName();
 
     public DirectorySource(Path directory) {
         this.directory = directory;
@@ -56,7 +57,7 @@ public class DirectorySource implements MessageSourceSupplier, Watchable {
         return new MessageSource(
                 toInvariantSeparatorsPath(directory.relativize(filepath)),
                 createPackageName(directory.relativize(filepath.getParent())),
-                filenameToClassNameFunction.apply(filepath.getFileName().toString()),
+                filenameToClassName.apply(filepath.getFileName().toString()),
                 PropertiesProcessor.load(filepath)
         );
     }
@@ -77,5 +78,21 @@ public class DirectorySource implements MessageSourceSupplier, Watchable {
         return path.getFileSystem().getSeparator().equals("/") ?
                 path.toString() :
                 path.toString().replace(path.getFileSystem().getSeparator(), "/");
+    }
+
+    public static class FilenameToClassName {
+
+        private UnaryOperator<String> operator = filename -> Naming.toClassName(filename.replace(".properties", "")) + "Messages";
+
+        private FilenameToClassName() {
+        }
+
+        public @NotNull String apply(@NotNull String filename) {
+            return operator.apply(filename);
+        }
+
+        public void suffixed(@NotNull String suffix) {
+            operator = filename -> Naming.toClassName(filename.replace(".properties", "")) + suffix;
+        }
     }
 }
