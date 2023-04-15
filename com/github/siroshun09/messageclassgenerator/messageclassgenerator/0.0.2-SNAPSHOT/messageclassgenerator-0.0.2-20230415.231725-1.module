@@ -1,0 +1,113 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "com.github.siroshun09.messageclassgenerator",
+    "module": "messageclassgenerator",
+    "version": "0.0.2-SNAPSHOT",
+    "attributes": {
+      "org.gradle.status": "integration"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.1"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.environment": "standard-jvm",
+        "org.gradle.jvm.version": 17,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "files": [
+        {
+          "name": "messageclassgenerator-0.0.2-SNAPSHOT.jar",
+          "url": "messageclassgenerator-0.0.2-SNAPSHOT.jar",
+          "size": 51974,
+          "sha512": "99563fe70421774c385e8b37f34b3610c240498ed0deeb4d3e8f2358be674cafb4bf789538d481245b8247b837071b01800febc973d10836b29e566545f3071c",
+          "sha256": "1ed20abce5cdbaacdaa4d675e0c46d1dd1bde571eacd2f343b46963222cb24dc",
+          "sha1": "c8d23dbb52319fab7ac5bceef3e6f4cc56358c2d",
+          "md5": "455a63ffbda1b2c5347b4baf9e4a1709"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.environment": "standard-jvm",
+        "org.gradle.jvm.version": 17,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "io.methvin",
+          "module": "directory-watcher",
+          "version": {
+            "requires": "0.18.0"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "messageclassgenerator-0.0.2-SNAPSHOT.jar",
+          "url": "messageclassgenerator-0.0.2-SNAPSHOT.jar",
+          "size": 51974,
+          "sha512": "99563fe70421774c385e8b37f34b3610c240498ed0deeb4d3e8f2358be674cafb4bf789538d481245b8247b837071b01800febc973d10836b29e566545f3071c",
+          "sha256": "1ed20abce5cdbaacdaa4d675e0c46d1dd1bde571eacd2f343b46963222cb24dc",
+          "sha1": "c8d23dbb52319fab7ac5bceef3e6f4cc56358c2d",
+          "md5": "455a63ffbda1b2c5347b4baf9e4a1709"
+        }
+      ]
+    },
+    {
+      "name": "javadocElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "javadoc",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "messageclassgenerator-0.0.2-SNAPSHOT-javadoc.jar",
+          "url": "messageclassgenerator-0.0.2-SNAPSHOT-javadoc.jar",
+          "size": 198235,
+          "sha512": "ef792ec0abf0a78b690a02bbb7918ac6e2afafc52b48c896c02e2d489451d6129274a39c81c2195def1e76d9906c6d2b2b3ea5473724c792f29445e73ed1ffc3",
+          "sha256": "b7d9b8cdfcfdd648139d72d73c27147cbf46622ecd7b69a250317773ea8db631",
+          "sha1": "5361aaf473e17be778ca77d508422114b6028deb",
+          "md5": "3cea70ae765030e2c7c7f93b5b7056a3"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "messageclassgenerator-0.0.2-SNAPSHOT-sources.jar",
+          "url": "messageclassgenerator-0.0.2-SNAPSHOT-sources.jar",
+          "size": 22157,
+          "sha512": "95e1df4ef27619eb528c0fc3c2faad1c4cb7e3be0651b1789c9e751224d54b901963c6a6683c295f8230f713aec0d7b936584e1c79d45bf64686d123e2fe70e6",
+          "sha256": "c3df4bdc250a77bcb1655e76b8807878cf6064837669ce62efad00c2f9336c38",
+          "sha1": "ba4b99772ba54f07e532fa8b949899fbedc4a733",
+          "md5": "1ab3ff3b1f334f9666fb415612d6b398"
+        }
+      ]
+    }
+  ]
+}
