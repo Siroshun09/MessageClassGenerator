@@ -1,7 +1,7 @@
 plugins {
     `kotlin-dsl`
     kotlin("jvm") version embeddedKotlinVersion
-    id("com.gradle.plugin-publish") version "1.2.0"
+    id("com.gradle.plugin-publish") version "1.3.0"
     signing
 }
 
