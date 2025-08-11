@@ -11,7 +11,7 @@ repositories {
 }
 
 dependencies {
-    implementation("io.methvin", "directory-watcher", "0.18.0")
+    implementation("io.methvin", "directory-watcher", "0.19.1")
 }
 
 val javaVersion = JavaVersion.VERSION_17
